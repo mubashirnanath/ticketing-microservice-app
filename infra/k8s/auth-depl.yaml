@@ -7,14 +7,14 @@ spec:
   selector: 
     matchLabels: 
       app: auth
-    template: 
-      metadata: 
-        labels: 
-          app: auth
-      spec: 
-        containers: 
-          - name: auth
-            image: mubashirnanath/auth
+  template: 
+    metadata: 
+      labels: 
+        app: auth
+    spec: 
+      containers: 
+        - name: auth
+          image: mubashirnanath/auth
 ---
 apiVersion: v1
 kind: Service
@@ -28,4 +28,3 @@ spec:
     protocol: TCP
     port: 3000
     targetPort: 3000
-
